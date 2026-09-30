@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/appLogoSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pxlogogre"
+            android:layout_alignParentStart="true"
+            android:contentDescription="PrintXpress Logo" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/appLogoSmall"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:text="PrintXpress"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Login Button Removed as per request -->
+    </RelativeLayout>
+
+    <!-- 🔍 SEARCH BAR -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="2dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search products..." />
+    </androidx.cardview.widget.CardView>
+
+    <!-- 🏷 CATEGORY FILTER -->
+    <HorizontalScrollView
+        android:id="@+id/categoryScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchCard"
+        android:scrollbars="none"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/catAll"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="All"
+                android:textColor="@color/colorPrimary"
+                app:strokeColor="@color/colorPrimary"
+                app:cornerRadius="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/catCards"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Cards"
+                android:textColor="@color/text_secondary"
+                app:strokeColor="@color/text_secondary"
+                app:cornerRadius="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/catMarketing"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Marketing"
+                android:textColor="@color/text_secondary"
+                app:strokeColor="@color/text_secondary"
+                app:cornerRadius="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/catPosters"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Posters"
+                android:textColor="@color/text_secondary"
+                app:strokeColor="@color/text_secondary"
+                app:cornerRadius="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/catMerchandise"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Merchandise"
+                android:textColor="@color/text_secondary"
+                app:strokeColor="@color/text_secondary"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 📦 PRODUCT LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_below="@id/categoryScroll"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- 🧭 BOTTOM NAVIGATION -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/customer_menu_guest" />
+
+</RelativeLayout>

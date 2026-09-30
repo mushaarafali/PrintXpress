@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Premium Blue & White Palette -->
+    <color name="colorPrimary">#1A237E</color> <!-- Indigo / Deep Blue -->
+    <color name="colorPrimaryVariant">#0D47A1</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <color name="colorSecondary">#2196F3</color> <!-- Material Blue -->
+    <color name="colorSecondaryVariant">#1976D2</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <color name="premium_blue_dark">#101D42</color>
+    <color name="premium_blue_light">#E3F2FD</color>
+    <color name="premium_gold">#D4AF37</color> <!-- Accent for "Premium" look -->
+
+    <color name="background_light">#F5F7FA</color>
+    <color name="text_main">#000000</color> <!-- Absolute Black for clarity -->
+    <color name="text_secondary">#444444</color> <!-- Dark Gray -->
+    <color name="status_success">#4CAF50</color>
+    <color name="status_pending">#FFC107</color>
+</resources>

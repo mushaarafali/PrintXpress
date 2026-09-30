@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pxlogogre"
+        android:label="PrintXpress"
+        android:roundIcon="@drawable/pxlogogre"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PrintXpress"
+        tools:targetApi="31">
+
+        <!-- ================= ADMIN ================= -->
+        <activity android:name=".activities.admin.AdminDashboardActivity" />
+        <activity android:name=".activities.admin.AddProductActivity" />
+        <activity android:name=".activities.admin.ManageProductsActivity" />
+        <activity android:name=".activities.admin.ManageOrdersActivity" />
+        <activity android:name=".activities.admin.UpdateOrderStatusActivity" />
+        <activity android:name=".activities.admin.ManageUsersActivity" />
+        <activity android:name=".activities.admin.ManageOffersActivity" />
+        <activity android:name=".activities.admin.EditProductActivity" />
+        <activity android:name=".activities.admin.EditOfferActivity" />
+        <activity android:name=".activities.admin.AdminReportsActivity" />
+
+        <!-- ================= CUSTOMER ================= -->
+        <activity android:name=".activities.customer.CustomerDashboardActivity" />
+
+        <activity android:name=".activities.customer.PlaceOrderActivity" />
+        <activity android:name=".activities.customer.MyOrdersActivity" />
+        <activity android:name=".activities.customer.OffersActivity" />
+        <activity android:name=".activities.customer.ProfileActivity" />
+        <activity android:name=".activities.customer.OrderTrackingActivity" />
+        <activity android:name=".activities.customer.DesignGuidelinesActivity" />
+
+        <!-- ================= AUTH ================= -->
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ================= LAUNCHER REDIRECTED ================= -->
+        <activity
+            android:name=".activities.customer.ProductListActivity"
+            android:exported="false">
+        </activity>
+
+    </application>
+
+</manifest>
